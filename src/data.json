@@ -1,0 +1,82 @@
+{
+  "testimonials": [{
+    "name": "Emily R.",
+    "role": "Marketing Director",
+    "description": "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+    "image": {
+      "mobile": "/images/image-emily.jpg",
+      "desktop": "/images/image-emily.jpg"
+    }
+  }, {
+    "name": "Thomas S.",
+    "role": "Chief Operating Officer",
+    "description": "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+    "image": {
+      "mobile": "/images/image-thomas.jpg",
+      "desktop": "/images/image-thomas.jpg"
+    }
+  }, {
+    "name": "Jennie F.",
+    "role": "Business Owner",
+    "description": "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+    "image": {
+      "mobile": "/images/image-jennie.jpg",
+      "desktop": "/images/image-jennie.jpg"
+    }
+  }],
+  "images": [{
+      "mobile": "/images/mobile/image-gallery-milkbottles.jpg",
+      "desktop": "/images/desktop/image-gallery-milkbottles.jpg"
+    }, {
+      "mobile": "/images/mobile/image-gallery-orange.jpg",
+      "desktop": "/images/desktop/image-gallery-orange.jpg"
+    }, {
+      "mobile": "/images/mobile/image-gallery-cone.jpg",
+      "desktop": "/images/desktop/image-gallery-cone.jpg"
+    },{
+      "mobile": "/images/mobile/image-gallery-sugarcubes.jpg",
+      "desktop": "/images/desktop/image-gallery-sugarcubes.jpg"
+    }],
+  "boxes": [
+    { 
+      "type": "doublebox",
+      "dir": "right",
+      "image": {
+        "mobile": "/images/mobile/image-transform.jpg",
+        "desktop": "/images/desktop/image-transform.jpg"
+      },
+      "title": "Transform your brand",
+      "description": "We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
+    },
+    { 
+      "type": "doublebox",
+      "dir": "left",
+      "image": {
+        "mobile": "/images/mobile/image-stand-out.jpg",
+        "desktop": "/images/desktop/image-stand-out.jpg"
+      },
+      "title": "Stand out to the right audience",
+      "description": "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places."
+    },
+    { 
+      "type": "singlebox",
+      "dir": "left",
+      "image": {
+        "mobile": "/images/mobile/image-graphic-design.jpg",
+        "desktop": "/images/desktop/image-graphic-design.jpg"
+      },
+      "title": "Graphic Design",
+      "description": "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."
+    },
+    { 
+      "type": "singlebox",
+      "dir": "left",
+      "image": {
+        "mobile": "/images/mobile/image-photography.jpg",
+        "desktop": "/images/desktop/image-photography.jpg"
+      },
+      "title": "Photography",
+      "description": "Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+    }
+  ]
+}
