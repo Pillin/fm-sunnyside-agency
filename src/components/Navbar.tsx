@@ -21,9 +21,18 @@ const Nav = styled.nav<{ color?: string }>`
     display: block;
     list-style: none;
     letter-spacing: -0.128571px;
-    color: ${({ color }) => color || "white"};
+    color: ${({ color }) => color || "#808397"};
 
     &:hover {
+      color: ${({ color }) => color ? "white" : "black"};
+    }
+  }
+
+  @media (min-width: 769px) {
+    li {
+      color: ${({ color }) => color || "white"};
+    }
+     &:hover {
       color: ${({ color }) => color ? "white" : "rgb(44, 117, 102)"};
     }
   }
@@ -50,8 +59,9 @@ const Container = styled.section`
   justify-content: center;
   gap: 0px 32px;
   align-items: center;
-  
+  position:relative;
   width: 100%;
+   z-index: 3;
 `;
 
 const Content = styled.section`
@@ -71,7 +81,33 @@ const Row = styled.section`
 `;
 
 const MenuContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  background: white;
+  z-index: 4;
+  padding: 32px 0px;
+  width: 90%;
+  ul {
+    flex-direction: column;
+  }
 
+  li {
+    text-align: center;
+  }
+
+  ::before {
+    content: " ";
+    top: -20px;
+    width: 0px;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    border-bottom: 20px solid white;
+    border-left: 20px solid transparent;
+  }
 `;
 
 const Menu = () => {
@@ -92,9 +128,9 @@ const Navbar = () => {
         <ULList />
         <PrimaryButton>CONTACT</PrimaryButton>
       </Row>}
-      {!isDesktop && <IconHamburger />}
-      {!isDesktop && showMenu && <Menu />}
+      {!isDesktop && <IconHamburger onClick={() => setShowMenu(!showMenu)} />}
     </Content>
+    {!isDesktop && showMenu && <Menu />}
   </Container>;
 }
 

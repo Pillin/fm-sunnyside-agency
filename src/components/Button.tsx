@@ -47,16 +47,22 @@ export const PrimaryButton = styled.button`
   line-height: 25px;
   letter-spacing: -0.107143px;
   text-transform: uppercase;
-
   color: #24303E;
-  background: #FFFFFF;
+  background: #FBD600;
   border-radius: 28px;
   border: 0px solid transparent;
+  padding: 8px 0px;
 
-  &:hover {
-    background-color: #77CDF5;
-    color: white;
-    mix-blend-mode: normal;
+  @media (min-width: 769px) {
+    color: #24303E;
+    background: #FFFFFF;
+    &:hover {
+      background-color: #77CDF5;
+      color: white;
+      mix-blend-mode: normal;
+    }
   }
+
+  
 
 `;

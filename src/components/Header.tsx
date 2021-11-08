@@ -19,7 +19,7 @@ const Container = styled.section`
   svg {
     position: absolute;
     z-index: 3;
-    top: 30%;
+    top: 36%;
   }
 `;
 
