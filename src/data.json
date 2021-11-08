@@ -1,4 +1,11 @@
 {
+  "header": {
+    "title": "We are creatives",
+    "image": {
+      "mobile": "/images/mobile/image-header.jpg",
+      "desktop": "/images/desktop/image-header.jpg"
+    }
+  },
   "testimonials": [{
     "name": "Emily R.",
     "role": "Marketing Director",
@@ -34,13 +41,14 @@
       "mobile": "/images/mobile/image-gallery-cone.jpg",
       "desktop": "/images/desktop/image-gallery-cone.jpg"
     },{
-      "mobile": "/images/mobile/image-gallery-sugarcubes.jpg",
+      "mobile": "/images/mobile/image-gallery-sugar-cubes.jpg",
       "desktop": "/images/desktop/image-gallery-sugarcubes.jpg"
     }],
   "boxes": [
     { 
       "type": "doublebox",
       "dir": "right",
+      "color":"#FAD400",
       "image": {
         "mobile": "/images/mobile/image-transform.jpg",
         "desktop": "/images/desktop/image-transform.jpg"
@@ -51,6 +59,7 @@
     { 
       "type": "doublebox",
       "dir": "left",
+      "color": "#FE7766",
       "image": {
         "mobile": "/images/mobile/image-stand-out.jpg",
         "desktop": "/images/desktop/image-stand-out.jpg"

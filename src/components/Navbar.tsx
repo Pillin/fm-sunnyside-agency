@@ -1,31 +1,39 @@
+import { useState } from "react";
 import styled from "@emotion/styled";
-import { IMG } from "./Image";
 import { PrimaryButton } from "./Button";
+import { ReactComponent as Logo } from "../assets/logo.svg";
+import { ReactComponent as IconHamburger } from "../assets/icon-hamburger.svg";
+import useDeviceSize from "../hooks/useDevice";
 
-const Nav = styled.nav`
+
+const Nav = styled.nav<{ color?: string }>`
   ul {
     display: flex;
     flex-direction; row;
     gap: 0px 32px;
+    padding: 0px;
   }
   li {
+    font-family: Barlow;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    /* identical to box height, or 139% */
     display: block;
     list-style: none;
     letter-spacing: -0.128571px;
-    color: white;
+    color: ${({ color }) => color || "white"};
+
+    &:hover {
+      color: ${({ color }) => color ? "white" : "rgb(44, 117, 102)"};
+    }
   }
 
 `;
 
-export const Logo = () => <IMG mobile="/images/logo.svg" desktop="/images/logo.svg" alt=""
-  style={{ display: "block", aspectRatio: "170 / 33", width: "170px" }} />
 
-export const ULList = () => {
-  return <Nav>
+
+export const ULList = (props: { color?: string }) => {
+  return <Nav color={props.color}>
     <ul>
       <li>About</li>
       <li>Services</li>
@@ -38,7 +46,7 @@ export const ULList = () => {
 const Container = styled.section`
   display: flex;
   flex-direction: row;
-  background-color: #4abdf2;
+  background-color: #3DBFFF;
   justify-content: center;
   gap: 0px 32px;
   align-items: center;
@@ -51,6 +59,7 @@ const Content = styled.section`
   max-width: 1440px;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: 16px;
 `;
 
@@ -61,14 +70,30 @@ const Row = styled.section`
   gap: 0px 32px;
 `;
 
+const MenuContainer = styled.section`
+
+`;
+
+const Menu = () => {
+  return <MenuContainer>
+    <ULList />
+    <PrimaryButton>CONTACT</PrimaryButton>
+  </MenuContainer>
+}
+
+
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const { isDesktop } = useDeviceSize();
   return <Container>
     <Content>
-      <Logo />
-      <Row>
+      <Logo color="white" />
+      {isDesktop && <Row>
         <ULList />
         <PrimaryButton>CONTACT</PrimaryButton>
-      </Row>
+      </Row>}
+      {!isDesktop && <IconHamburger />}
+      {!isDesktop && showMenu && <Menu />}
     </Content>
   </Container>;
 }

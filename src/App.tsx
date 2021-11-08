@@ -4,8 +4,11 @@ import Footer from "./components/Footer";
 import DoubleBox from "./components/DoubleBox";
 import SingleBox from "./components/SingleBox";
 import Testimonial from "./components/Testimonial"
+import Header from "./components/Header";
 import { IMG } from "./components/Image";
-import { boxes, images, testimonials } from "./data.json";
+import { boxes, images, testimonials, header } from "./data.json";
+import { H6 } from "./components/Typography";
+import useDeviceSize from "./hooks/useDevice";
 
 
 
@@ -32,25 +35,40 @@ const Row = styled.section`
   width: 100%;
   aling-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
+
+const TestimonialContainer = styled.section`
+  display: flex;
+  padding: 128px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+
 function App() {
+  const { isDesktop } = useDeviceSize();
   return (
     <Container>
       <Navbar />
+      <Header {...header} />
+
       <Content>
         {boxes.map((elem, index) => {
           if (elem.type === "doublebox") return <DoubleBox {...elem} />
           if (elem.type === "singlebox") return <SingleBox  {...elem} />
           return <> </>
         })}
-        <Row>
+
+        <TestimonialContainer>
+          <H6>CLIENT TESTIMONIALS</H6>
           {testimonials.map((elem, index) => <Testimonial {...elem} />)}
-        </Row>
+        </TestimonialContainer>
 
         <Row>
           {images.map((elem, index) =>
-            <IMG key={index} {...elem} alt="" style={{ aspectRatio: "447 / 360", width: "25%" }} />
+            <IMG key={index} {...elem} alt="" style={{ aspectRatio: "447 / 360", width: isDesktop ? "25%" : "50%" }} />
           )}
 
         </Row>
