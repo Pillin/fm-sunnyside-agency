@@ -13,13 +13,13 @@ const useDeviceSize = () => {
     const isTablet = window.innerWidth > 425 && window.innerWidth < 769;
     const isDesktop = window.innerWidth > 769;
     setSizes({ isMobile, isTablet, isDesktop });
-  }, [window]);
+  }, []);
 
   useEffect(() => {
     changeSizes();
     window.addEventListener("resize", changeSizes);
     return () => window.removeEventListener("resize", changeSizes);
-  }, []);
+  }, [changeSizes]);
 
   return sizes;
 };
