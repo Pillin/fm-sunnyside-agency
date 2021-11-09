@@ -12,7 +12,7 @@ export const Button = styled.button<{ color?: string }>`
   background: transparent;
   border: 0px solid transparent;
   z-index:2;
-
+  cursor: pointer;
   span {
     position: relative;
     z-index: 1;
@@ -52,6 +52,7 @@ export const PrimaryButton = styled.button`
   border-radius: 28px;
   border: 0px solid transparent;
   padding: 8px 0px;
+  cursor: pointer;
 
   @media (min-width: 769px) {
     color: #24303E;

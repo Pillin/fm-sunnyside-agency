@@ -10,6 +10,7 @@ const Container = styled.section`
   justify-content: space-between;
 
   svg {
+    cursor: pointer;
     &:hover path {
       fill: white;
     }

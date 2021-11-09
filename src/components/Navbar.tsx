@@ -14,6 +14,7 @@ const Nav = styled.nav<{ color?: string }>`
     padding: 0px;
   }
   li {
+    cursor: pointer;
     font-family: Barlow;
     font-weight: 600;
     font-size: 18px;
